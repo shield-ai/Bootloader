@@ -188,6 +188,7 @@
 # define BOARD_LED_ON                   gpio_clear
 # define BOARD_LED_OFF                  gpio_set
 
+/*
 # define BOARD_USART  					USART1
 # define BOARD_USART_CLOCK_REGISTER 	RCC_APB2ENR
 # define BOARD_USART_CLOCK_BIT      	RCC_APB2ENR_USART1EN
@@ -198,6 +199,19 @@
 # define BOARD_PIN_RX		     		GPIO7
 # define BOARD_USART_PIN_CLOCK_REGISTER RCC_AHB1ENR
 # define BOARD_USART_PIN_CLOCK_BIT  	RCC_AHB1ENR_IOPBEN
+*/
+
+// http://www.st.com/content/ccc/resource/technical/document/reference_manual/3d/6d/5a/66/b4/99/40/d4/DM00031020.pdf/files/DM00031020.pdf/jcr:content/translations/en.DM00031020.pdf
+# define BOARD_USART  					USART2
+# define BOARD_USART_CLOCK_REGISTER 	RCC_APB1ENR
+# define BOARD_USART_CLOCK_BIT      	RCC_APB1ENR_USART2EN
+
+# define BOARD_PORT_USART   			GPIOD
+# define BOARD_PORT_USART_AF 			GPIO_AF7
+# define BOARD_PIN_TX     				GPIO5
+# define BOARD_PIN_RX		     		GPIO6
+# define BOARD_USART_PIN_CLOCK_REGISTER RCC_AHB1ENR
+# define BOARD_USART_PIN_CLOCK_BIT  	RCC_AHB1ENR_IOPDEN
 
 /*
  * Uncommenting this allows to force the bootloader through
