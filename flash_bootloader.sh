@@ -3,7 +3,7 @@
 make px4fmuv4_bl || exit 1
 
 #PORT=/dev/ttyACM0
-PORT=/dev/serial/by-id/usb-Black_Sphere_Technologies_Black_Magic_Probe_DDD5C5DE-if00
+PORT=$(ls /dev/serial/by-id/usb-Black_Sphere_Technologies_Black_Magic_Probe_*-if00)
 
 elf=px4fmuv4_bl.elf
 
